@@ -3,8 +3,6 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := ble_mesh_client_model
-
-COMPONENT_ADD_INCLUDEDIRS := components/include
+PROJECT_NAME := system_receiver
 
 include $(IDF_PATH)/make/project.mk

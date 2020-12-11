@@ -1,6 +1,2 @@
-set(COMPONENT_SRCS "ble_mesh_demo_main.c"
-                   "board.c")
-
-set(COMPONENT_ADD_INCLUDEDIRS ".")
-
-register_component()
+idf_component_register(SRCS "system_receiver.c"
+                    INCLUDE_DIRS ".")

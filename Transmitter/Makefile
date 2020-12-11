@@ -3,7 +3,6 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := espnow_example
+PROJECT_NAME := system_transmitter
 
 include $(IDF_PATH)/make/project.mk
-
