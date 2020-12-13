@@ -46,15 +46,18 @@ static void gps_routine_task(){
       int frame_cnt=0;
       memset(d_frame_s,0,24);
 
-      // printf("Length: %d\n", len);
+      #ifdef VERBOSE_M
+        printf("Length: %d\n", len);
+        for(int i=0; i<len; i++)
+          printf("%c",*(data+i));
+        printf("Total %d Frame\n",frame_cnt);
+      #endif
       //count frames
       for(int i=0; i<len; i++){
         if(*(data+i)=='$'){
           d_frame_s[frame_cnt++]=i;
         }
-        // printf("%c",*(data+i));
       }
-      // printf("Total %d Frame\n",frame_cnt);
 
       //loop through each frame
       for(int i=0; i<frame_cnt; i++)
