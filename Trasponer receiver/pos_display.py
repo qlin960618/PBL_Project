@@ -197,7 +197,7 @@ class App:
 		print("U", U)
 		print("V", V)
 
-		self.ax.quiver(X, Y, U, V, angles='xy', scale_units='xy', scale=1)
+		self.ax.quiver(X, Y, U, V, angles='xy', scale_units='xy', scale=1, color='gb')
 		# self.ax.set_xlim([35.72034, 35.72038])
 		# self.ax.set_ylim([139.7555, 139.7559])		
 		self.ax.set_xlim([-5, 5])
@@ -207,11 +207,11 @@ class App:
 		self.canvas.draw()
 		self.canvas.get_tk_widget().pack(side=tk.RIGHT, fill=tk.BOTH, expand=1)
 
-		xAxisLabel=tk.Label(self.drawFrame, text="Latitude (meter)", \
+		yAxisLabel=tk.Label(self.drawFrame, text="Latitude NS (meter)", \
 					font=("Courier", 16), wraplength=1)
-		xAxisLabel.pack(side=tk.LEFT)
-		yAxisLabel=tk.Label(masterWindow, text="Longitude (meter)", font=("Courier", 16))
-		yAxisLabel.pack(side=tk.BOTTOM)
+		yAxisLabel.pack(side=tk.LEFT)
+		xAxisLabel=tk.Label(masterWindow, text="Longitude E/W (meter)", font=("Courier", 16))
+		xAxisLabel.pack(side=tk.BOTTOM)
 
 
 		#initilize loop
@@ -277,7 +277,7 @@ class App:
 			# print("U", U)
 			# print("V", V)
 
-			self.ax.quiver(X, Y, U, V, angles='xy', scale_units='xy', scale=1)
+			self.ax.quiver(X, Y, U, V, angles='xy', scale_units='xy', scale=1, color='gb')
 			# self.ax.set_xlim([35.72034, 35.72038])
 			# self.ax.set_ylim([139.7555, 139.7559])
 			space=10
